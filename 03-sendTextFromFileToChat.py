@@ -35,7 +35,7 @@ if __name__ == "__main__":
         If an error (Exception) occurs it is printed out to the console
         """
         try:
-            # this opup the text file in read only ('r') mode
+            # this opens up the text file in read only ('r') mode
             textFile = open(filenameToOpen, mode='r')
             # Each line in the text file must be sent as a separate message
 
