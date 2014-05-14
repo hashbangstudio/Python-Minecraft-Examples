@@ -868,13 +868,13 @@ def print_string_to_world(string, lowerLeftX, lowerLeftY, lowerLeftZ, blockToUse
 
 
 if __name__ == "__main__":
-	
-	mc = minecraft.Minecraft.create()
-	pos = mc.player.getTilePos()
+    
+    mc = minecraft.Minecraft.create()
+    pos = mc.player.getTilePos()
         numOfArgs = len(sys.argv)
         if numOfArgs == 2:
             print_string_to_world(sys.argv[1], pos.x+19, pos.y+1, pos.z+19, mc_block.WOOL.withData(2))
-	elif numOfArgs == 3:
+    elif numOfArgs == 3:
             blockIdAndData = sys.argv[2].split(',')
             blockId = int(blockIdAndData[0])
             blockData = int(blockIdAndData[1])

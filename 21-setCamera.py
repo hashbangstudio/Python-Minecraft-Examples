@@ -11,15 +11,15 @@ def printAvailableCameraModes():
 # this means that the file can be imported without executing anything in this code block
 if __name__ == "__main__":
 
-	"""
-	First thing you do is create a connection to minecraft
-	This is like dialling a phone.
-	It sets up a communication line between your script and the minecraft world
-	"""
-	
-	# Create a connection to Minecraft
-	# Any communication with the world must use this object
-	mc = Minecraft.create()
+    """
+    First thing you do is create a connection to minecraft
+    This is like dialling a phone.
+    It sets up a communication line between your script and the minecraft world
+    """
+    
+    # Create a connection to Minecraft
+    # Any communication with the world must use this object
+    mc = Minecraft.create()
      
         # remember this includes the name of the script as well
         minNumOfParams = 3

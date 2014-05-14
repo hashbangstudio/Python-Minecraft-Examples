@@ -5,11 +5,11 @@ from time import sleep
 
 if __name__ == "__main__":
 
-	# Create a connection to the Minecraft game
-	mc = Minecraft.create()
-	
-	# Get the player position
-	playerPosition = mc.player.getTilePos()
+    # Create a connection to the Minecraft game
+    mc = Minecraft.create()
+    
+    # Get the player position
+    playerPosition = mc.player.getTilePos()
 
         wallStartXposn = playerPosition.x + 6
         wallStartYposn = playerPosition.y + 1
