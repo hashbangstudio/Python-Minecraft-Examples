@@ -13,7 +13,7 @@ To use these examples first you need to have Minecraft installed:
 
 4. Unzip/Uncompress this file by navigating to it in the *File Manager* and right clicking on it and click on *Extract here*
 5. Go into the newly created folder *mcpi*
-6 .Double click on the file *minecraft-pi* and choose *Execute*
+6. Double click on the file *minecraft-pi* and choose *Execute*
 7. This will have opened up Minecraft, you need to start a game and create a new world
 
 Now that Minecraft is running and you are in the world you can run the examples.
