@@ -17,7 +17,7 @@ To use these examples first you need to have Minecraft installed:
 7. This will have opened up Minecraft, you need to start a game and create a new world
 
 Now that Minecraft is running and you are in the world you can run the examples.
-All examples can be run from the command line in LXTerminal 
+All examples can be run from the command line in LXTerminal. 
 To run in IDLE some examples need slight modification first to replace the usage of command line arguments
 
 ##Running the Examples in LXTerminal
@@ -45,11 +45,15 @@ For example with file *02-sendArgsMessageToChat.py* we edit the file so that bel
 ```python
 if __name__ == '__main__':
 ```
-We add the following line:
+We add the following line so it becomes:
 ```python
-sys.argv = [sys.argv[0], "this is a message"]
+if __name__ == '__main__':
+    sys.argv = [sys.argv[0], "this is a message"]
 ```
+NOTE : the new line should begin with 4 spaces for correct indentation
+
 In general you can add any number of arguments this way
 ```python
-sys.argv = [sys.argv[0], argument1, argument2, argument3]
+if __name__ == '__main__':
+    sys.argv = [sys.argv[0], argument1, argument2, argument3]
 ```
