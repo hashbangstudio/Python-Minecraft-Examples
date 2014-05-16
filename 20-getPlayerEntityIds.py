@@ -9,18 +9,18 @@ if __name__ == "__main__":
     This is like dialling a phone.
     It sets up a communication line between your script and the minecraft world
     """
-    
+
     # Create a connection to Minecraft
     # Any communication with the world must use this object
     mc = Minecraft.create()
-    
-        allIds = mc.getPlayerEntityIds()
+
+    allIds = mc.getPlayerEntityIds()
     message = ""
-        # create the output message as a string
+    # create the output message as a string
     for id in allIds:
-            message += "id is "+ str(id)
+        message += "id is "+ str(id)
         # print to the python interpreter standard output (terminal or IDLE probably)
         print(message)
         # send message to the minecraft chat
-        mc.postToChat(message) 
- 
+        mc.postToChat(message)
+

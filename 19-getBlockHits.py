@@ -19,8 +19,8 @@ if __name__ == "__main__":
     # Get the current tile/block that the player is located at in the world
     playerPosition = mc.player.getTilePos()
     
-        while(True):
-            hits = mc.events.pollBlockHits()
-            if len(hits) > 0:
-                print hits
+    while(True):
+        hits = mc.events.pollBlockHits()
+        if len(hits) > 0:
+            print hits
 

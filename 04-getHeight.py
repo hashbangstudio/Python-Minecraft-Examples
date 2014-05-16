@@ -20,26 +20,26 @@ if __name__ == "__main__":
     # Get the current tile/block that the player is located at in the world
     playerPosition = mc.player.getTilePos()
 
-        x = playerPosition.x
-        z = playerPosition.z
+    x = playerPosition.x
+    z = playerPosition.z
 
-        numOfArgs = len(sys.argv) 
+    numOfArgs = len(sys.argv) 
 
-        if numOfArgs == 3:
-            x = int(sys.argv[1]) 
-            z = int(sys.argv[2])
-        elif numOfArgs == 1:
-            # just use the player position for x and z
-            pass
-        else:
-            print("Expected 2 or 0 arguments but recieved "+str(numofArgs-1)) 
-            print("To get the height of the world at the player")
-            print("Usage: python script.py")
-            print("To get the height of the world at a specific coordinate")
-            print("Usage: python script.py x z")
+    if numOfArgs == 3:
+        x = int(sys.argv[1]) 
+        z = int(sys.argv[2])
+    elif numOfArgs == 1:
+        # just use the player position for x and z
+        pass
+    else:
+        print("Expected 2 or 0 arguments but recieved "+str(numOfArgs-1)) 
+        print("To get the height of the world at the player")
+        print("Usage: python script.py")
+        print("To get the height of the world at a specific coordinate")
+        print("Usage: python script.py x z")
     
-        #get the height of the world at the coordinates (x,z)
-        height = mc.getHeight(x, z)
+    #get the height of the world at the coordinates (x,z)
+    height = mc.getHeight(x, z)
 
     # create the output message as a string
     message = " height world is "+ str(height)+ " at "+ str((x,z))

@@ -11,38 +11,38 @@ if __name__ == "__main__":
     This is like dialling a phone.
     It sets up a communication line between your script and the minecraft world
     """
-    
+
     # Create a connection to Minecraft
     # Any communication with the world must use this object
     mc = Minecraft.create()
-    
+
     # Get the current tile/block that the player is located at in the world
     playerPosition = mc.player.getTilePos()
-    
+
     # create the output message as a string
     message = " you are at (" +str(playerPosition.x)+","+str(playerPosition.y)+","+str(playerPosition.z)+")"
-    
+
     # print to the python interpreter standard output (terminal or IDLE probably)
     print(message)
-    
+
     # send message to the minecraft chat
-    mc.postToChat(message) 
- 
-        numOfArgs = len(sys.argv)
-        if numOfArgs == 3:
-            newXposn = int(sys.argv[1])
-            newZposn = int(sys.argv[2])
-        else:
-            print("incorrect number of arguments")
-            sys.exit()
+    mc.postToChat(message)
 
-        newYposn = mc.getHeight(newXposn, newZposn)
+    numOfArgs = len(sys.argv)
+    if numOfArgs == 3:
+        newXposn = int(sys.argv[1])
+        newZposn = int(sys.argv[2])
+    else:
+        print("incorrect number of arguments")
+        sys.exit()
 
-        mc.player.setTilePos(newXposn, newYposn, newZposn)
+    newYposn = mc.getHeight(newXposn, newZposn)
 
-        message = " you are now at (" +str(playerPosition.x)+","+str(playerPosition.y)+","+str(playerPosition.z)+")"
+    mc.player.setTilePos(newXposn, newYposn, newZposn)
 
-        print(message)
-        mc.postToChat(message)
+    message = " you are now at (" +str(playerPosition.x)+","+str(playerPosition.y)+","+str(playerPosition.z)+")"
 
-       
+    print(message)
+    mc.postToChat(message)
+
+

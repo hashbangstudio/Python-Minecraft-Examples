@@ -839,7 +839,7 @@ MAP_OF_ALPHANUM_TO_GLYPH = {'A':A,
 def convert_character_to_glyph(character):
     print ('char', character)
     return MAP_OF_ALPHANUM_TO_GLYPH[character]
-    
+
 def create_character_at_coords_with_block_on_x_axis(character, xCoord, yCoord, zCoord, blockToUse):
     glyph = convert_character_to_glyph(character)
     print ('glyph', glyph)
@@ -868,18 +868,18 @@ def print_string_to_world(string, lowerLeftX, lowerLeftY, lowerLeftZ, blockToUse
 
 
 if __name__ == "__main__":
-    
+
     mc = minecraft.Minecraft.create()
     pos = mc.player.getTilePos()
-        numOfArgs = len(sys.argv)
-        if numOfArgs == 2:
-            print_string_to_world(sys.argv[1], pos.x+19, pos.y+1, pos.z+19, mc_block.WOOL.withData(2))
+    numOfArgs = len(sys.argv)
+    if numOfArgs == 2:
+        print_string_to_world(sys.argv[1], pos.x+19, pos.y+1, pos.z+19, mc_block.WOOL.withData(2))
     elif numOfArgs == 3:
-            blockIdAndData = sys.argv[2].split(',')
-            blockId = int(blockIdAndData[0])
-            blockData = int(blockIdAndData[1])
-            blockToUse = mc_block.Block(blockId,blockData)
-            print_string_to_world(sys.argv[1], pos.x+19, pos.y+1, pos.z+19, blockToUse)
-        else:
-             print("incorrect number of arguments")
-             sys.exit()
+        blockIdAndData = sys.argv[2].split(',')
+        blockId = int(blockIdAndData[0])
+        blockData = int(blockIdAndData[1])
+        blockToUse = mc_block.Block(blockId,blockData)
+        print_string_to_world(sys.argv[1], pos.x+19, pos.y+1, pos.z+19, blockToUse)
+    else:
+         print("incorrect number of arguments")
+         sys.exit()
