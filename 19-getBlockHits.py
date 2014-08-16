@@ -16,9 +16,6 @@ if __name__ == "__main__":
     # Any communication with the world must use this object
     mc = Minecraft.create()
     
-    # Get the current tile/block that the player is located at in the world
-    playerPosition = mc.player.getTilePos()
-    
     while(True):
         hits = mc.events.pollBlockHits()
         if len(hits) > 0:
