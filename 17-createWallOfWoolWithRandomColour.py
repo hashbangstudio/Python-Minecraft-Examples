@@ -1,11 +1,20 @@
 #import the needed modules fo communication with minecraft world
 from mcpi.minecraft import *
 # import needed block defintiions
-from mcpi.block import *
+from mcpi.block import WOOL
 # needed to slow down the wall building
 from time import sleep
 # needed to generate a random number for the colour of wool
 from random import randint
+
+# create a function to create a random block of wool
+def getWoolBlockWithRandomColour():
+    #Generate a random number within the allowed range of colours (0 to 15 inclusive)
+    randomNumber = randint(0,15)
+    print("random number to be used = "+ str(randomNumber))
+    block = WOOL.withData(randomNumber)
+    return block
+
 
 if __name__ == "__main__":
 
@@ -29,10 +38,7 @@ if __name__ == "__main__":
         for column in range(10):
             #increase the distance along the row that the block is placed at
             blockXposn += 1
-            #Generate a random number within the allowed range of colours
-            randomNumber = randint(0,15)
-            print("random number to be used = "+ str(randomNumber))
-            print("Creating block at", blockXposn, blockYposn)
+            print("Creating block at", blockXposn, blockYposn, blockZposn)
             # Create a block
-            mc.setBlock(blockXposn, blockYposn, blockZposn, WOOL.withData(randomNumber))
+            mc.setBlock(blockXposn, blockYposn, blockZposn, getWoolBlockWithRandomColour())
             sleep(0.5)
