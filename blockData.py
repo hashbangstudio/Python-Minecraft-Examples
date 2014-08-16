@@ -78,14 +78,14 @@ def getBlockNameFromId(num):
     return blockIdToName[num]
 
 #avaiable 0-1, affects whether striking blk sets off fuse
-tntTypeNameTodId = {
+tntTypeNameToId = {
 "safe"  : 0,
 "armed" : 1
 }
 
 
 #available range 0-15, affects colour of wool block
-colourNameToId= {
+colourNameToId = {
 "white"      : 0,
 "orange"     : 1,
 "magenta"    : 2,
@@ -109,7 +109,7 @@ colourNameToId= {
 # only 0-2 seem to do anything for texture
 # 0 to 3 is type, beyond that is decay counter
 # avilablerange 0-15 
-leavesTypeNameToId ={
+leavesTypeNameToId = {
 "oak"   : 0,
 "pine"  : 1,
 "spruce": 1,
