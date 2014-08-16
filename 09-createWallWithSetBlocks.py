@@ -1,7 +1,7 @@
 #import the needed modules
 from mcpi.minecraft import *
 from mcpi.block import *
-from time import sleep
+
 
 if __name__ == "__main__":
 
