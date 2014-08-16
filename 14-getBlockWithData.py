@@ -28,8 +28,8 @@ if __name__ == "__main__":
     if blockAndData.id == AIR.id:
         # Need to do height minus one for this
         blockAndData = mc.getBlockWithData(playerPosition.x, height -1 , playerPosition.z)
-        blockName = getBlockNameFromId(blockAndData.id)
-
+        
+    blockName = getBlockNameFromId(blockAndData.id)
     # Add to message, the type of block stood on
     message += "  Block is of type " + str(blockAndData.id)+ " which is " + blockName
     # print to the python interpreter standard output (terminal or IDLE probably)
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     print(dataMessage)
     mc.postToChat(dataMessage)
 
-    if Block(blockAndData.id) == WOOL:
+    if blockAndData.id == WOOL.id:
        print "is wool"
        for colour, colId in colourNameToId.items():
            if colId == blockAndData.data:

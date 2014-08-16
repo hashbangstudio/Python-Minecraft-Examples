@@ -26,13 +26,13 @@ if __name__ == "__main__":
     # Get the type of block for the highest point in world
     # This is done at the horizonal player posn
     blockIdNum = mc.getBlock(playerPosition.x, height , playerPosition.z)
-    blockName = getBlockNameFromId(blockIdNum)
+    
 
     if (blockIdNum == AIR.id):
          # Need to do height minus one for this as not flower etc
          blockIdNum = mc.getBlock(playerPosition.x, height -1 , playerPosition.z)
-         blockName = getBlockNameFromId(blockIdNum)
-
+    
+    blockName = getBlockNameFromId(blockIdNum)
     # Add to message, the type of block stood on
     message += "  Block is of type " + str(blockIdNum)+ " which is " + blockName
 
