@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     # Create a wall using nested for loops
     for row in range(6):
-        # increase the height of th current row to be built
+        # increase the height of the current row to be built
         blockYposn += 1
         blockXposn = firstColumnX
         for column in range(10):

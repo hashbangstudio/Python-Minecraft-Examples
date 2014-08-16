@@ -41,6 +41,6 @@ if __name__ == "__main__":
 
     print str(blockToPlace)
     print str((blockXposn, blockYposn, blockZposn))
-    # Create a block of tnt, that is armed and ready to blow
+
     mc.setBlock(blockXposn, blockYposn, blockZposn, blockToPlace)
 

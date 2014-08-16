@@ -37,6 +37,7 @@ if __name__ == "__main__":
         print("Usage: python script.py")
         print("To get the height of the world at a specific coordinate")
         print("Usage: python script.py x z")
+        sys.exit()
     
     #get the height of the world at the coordinates (x,z)
     height = mc.getHeight(x, z)

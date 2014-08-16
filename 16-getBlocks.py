@@ -28,8 +28,6 @@ if __name__ == "__main__":
     # create the output message as a string
     message = " height is "+ str(height)
 
-    # Get the type of block for the highest point in world at horiz player posn
-    # Need to do height minus one for this
     blocksInCuboid = mc.getBlocks(playerPosition.x, height, playerPosition.z, \
                               playerPosition.x + 10, height, playerPosition.z + 10)
 

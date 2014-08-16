@@ -40,6 +40,9 @@ if __name__ == "__main__":
 
     mc.player.setTilePos(newXposn, newYposn, newZposn)
 
+    # Get the current tile/block that the player is located at in the world
+    playerPosition = mc.player.getTilePos()
+
     message = " you are now at (" +str(playerPosition.x)+","+str(playerPosition.y)+","+str(playerPosition.z)+")"
 
     print(message)

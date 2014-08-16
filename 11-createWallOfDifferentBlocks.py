@@ -21,13 +21,13 @@ if __name__ == "__main__":
     id = 0
     # Create a wall using nested for loops
     for row in range(6):
-        # increase the height of th current row to be built
+        # increase the height of the current row to be built
         blockYposn += 1
         blockXposn = firstColumnX
         for column in range(10):
             #increase the distance along the row that the block is placed at
             blockXposn += 1
-            print("Creating block at", blockXposn, blockYposn)
+            print("Creating block at", blockXposn, blockYposn, blockZposn)
             # Create a block
             mc.setBlock(blockXposn, blockYposn, blockZposn, Block(id))
             sleep(0.5)

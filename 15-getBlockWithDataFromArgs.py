@@ -16,7 +16,6 @@ if __name__ == "__main__":
     # Any communication with the world must use this object
     mc = Minecraft.create()
     
-    # Get the current tile/block that the player is located at in the world
     numOfArgs = len(sys.argv)
     if numOfArgs == 4:
         x = int(sys.argv[1])
@@ -41,7 +40,7 @@ if __name__ == "__main__":
     # post message to the chat
     mc.postToChat(message) 
 
-    if Block(blockAndData.id) == WOOL:
+    if blockAndData.id == WOOL.id:
        print "is wool"
        for colour, colId in woolColourNameToId.items():
            if colId == blockAndData.data:
