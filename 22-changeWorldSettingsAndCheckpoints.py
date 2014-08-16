@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     #wait for 2 seconds 
     sleep(2)
-
+    sendToChatAndConsole(mc, "Building Wall");
     # Get the player position
     playerPosition = mc.player.getTilePos()
 
@@ -76,4 +76,12 @@ if __name__ == "__main__":
     sleep(4)
     sendToChatAndConsole(mc, "Set Camera to normal player first person")
     mc.camera.setNormal(1)
+    #wait for 2 seconds 
+    sleep(2)
+    sendToChatAndConsole(mc, "Turning off AutoJump")
+    mc.player.setting('autojump', 0)
+    #wait for 8 seconds 
+    sleep(8)
+    sendToChatAndConsole(mc, "Turning on AutoJump")
+    mc.player.setting('autojump', 1)
 
