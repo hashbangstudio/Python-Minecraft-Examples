@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 #import the needed modules
 from mcpi.minecraft import *
 from mcpi.block import *

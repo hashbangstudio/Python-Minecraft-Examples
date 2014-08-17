@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import mcpi.minecraft as minecraft
 import mcpi.block as mc_block
 import sys

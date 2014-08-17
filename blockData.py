@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # import block  definitions
 from mcpi.block import *
 

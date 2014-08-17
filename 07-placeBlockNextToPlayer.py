@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 #import the needed modules fo communication with minecraft world
 from mcpi.minecraft import *
 from mcpi.block import *

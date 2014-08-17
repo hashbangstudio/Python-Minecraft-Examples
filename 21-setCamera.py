@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # We have to import the minecraft api module to do anything in the minecraft world
 from mcpi.minecraft import *
 
