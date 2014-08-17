@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # We have to import the minecraft api module to do anything in the minecraft world
 from mcpi.minecraft import *
 
@@ -27,7 +29,9 @@ if __name__ == "__main__":
 
     # send message to the minecraft chat
     mc.postToChat(message)
-
+    #Set Default values
+    newXposn = 0
+    newZposn = 0
     numOfArgs = len(sys.argv)
     if numOfArgs == 3:
         newXposn = int(sys.argv[1])
