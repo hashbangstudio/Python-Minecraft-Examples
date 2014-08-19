@@ -23,19 +23,29 @@ if __name__ == "__main__":
     # Any communication with the world must use this object
     mc = Minecraft.create()
 
-    # remember this includes the name of the script as well
-    minNumOfParams = 3
-    numOfParamsGiven = len(sys.argv)
+    minNumOfParams = 1
+    # Remember that this also includes the script name
+    numOfParamsGiven = len(sys.argv) - 1
 
     if numOfParamsGiven >= minNumOfParams:
         cameraMode = sys.argv[1]
 
-        if cameraMode == "follow" and sys.argv[2].isdigit() :
-            mc.camera.setFollow(sys.argv[2])
-        elif cameraMode == "normal" and sys.argv[2].isdigit():
-            mc.camera.setNormal(sys.argv[2])
+        if cameraMode == "follow" :
+            if numOfParamsGiven == 1:
+                mc.camera.setFollow()
+            elif numOfParamsGiven == 2 and sys.argv[2].isdigit():
+                mc.camera.setFollow(sys.argv[2])
+            else:
+               print("Expected 1 or 2 parameters but got "+str(numOfParamsGiven))
+        elif cameraMode == "normal" :
+            if numOfParamsGiven == 1:
+                mc.camera.setNormal()
+            elif numOfParamsGiven == 2 and sys.argv[2].isdigit():
+                mc.camera.setNormal(sys.argv[2])
+            else:
+               print("Expected 1 or 2 parameters but got "+str(numOfParamsGiven))
         elif cameraMode == "fixed":
-            if numOfParamsGiven == 5 :
+            if numOfParamsGiven == 4 :
             #should verify arguments are integer coordinates
                 mc.camera.setFixed()
                 mc.camera.setPos(sys.argv[2], \
@@ -49,4 +59,4 @@ if __name__ == "__main__":
             printAvailableCameraModes()
     else:
         print("insufficient parameters given")
-        print("Require "+str(minNumOfParams)+", got "+str(numOfParamsGiven))
+        print("Require minimum of "+str(minNumOfParams)+", got "+str(numOfParamsGiven))
