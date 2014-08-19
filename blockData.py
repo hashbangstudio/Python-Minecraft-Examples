@@ -3,7 +3,7 @@
 # import block  definitions
 from mcpi.block import *
 
-blockIdToName = {
+BLOCK_ID_TO_NAME = {
 AIR.id:"AIR",
 STONE.id:"STONE",
 GRASS.id:"GRASS",
@@ -80,14 +80,14 @@ def getBlockNameFromId(num):
     return blockIdToName[num]
 
 #avaiable 0-1, affects whether striking blk sets off fuse
-tntTypeNameToId = {
+TNT_TYPE_NAME_TO_ID = {
 "safe"  : 0,
 "armed" : 1
 }
 
 
 #available range 0-15, affects colour of wool block
-colourNameToId = {
+COLOUR_NAME_TO_ID = {
 "white"      : 0,
 "orange"     : 1,
 "magenta"    : 2,
@@ -111,7 +111,7 @@ colourNameToId = {
 # only 0-2 seem to do anything for texture
 # 0 to 3 is type, beyond that is decay counter
 # avilablerange 0-15 
-leavesTypeNameToId = {
+LEAVES_TYPE_NAME_TO_ID = {
 "oak"   : 0,
 "pine"  : 1,
 "spruce": 1,
@@ -122,7 +122,7 @@ leavesTypeNameToId = {
 
 # only 0-2 seem to o anything
 # available values 0-15 affects texture and rotation
-woodPlanksTypeNameToId = {
+WOOD_PLANKS_TYPE_NAME_TO_ID = {
 "oak-up"       : 0,
 "spruce-up"    : 1,
 "birch-up"     : 2,
@@ -143,7 +143,7 @@ woodPlanksTypeNameToId = {
 
 # available 0-15
 # 6,7,14 and 15 don't work (uses default stone)
-slabTypeNameToId = {
+SLAB_TYPE_NAME_TO_ID = {
 "stone"            : 0,
 "sandstone"        : 1,
 "wooden"           : 2,
@@ -170,7 +170,7 @@ slabTypeNameToId = {
 # only 1 to 5 does anything
 # 6 and 7 wil use default stone
 # above that just cycles back round 
-doubleSlabTypeNameToId = {
+DOUBLE_SLAB_TYPE_NAME_TO_ID = {
 "stone"            : 0,
 "sandstone"        : 1,
 "wooden"           : 2,
@@ -185,7 +185,7 @@ doubleSlabTypeNameToId = {
 }
 
 #available 0 to 2
-sandstoneTypeNameToId = {
+SANDSTONE_TYPE_NAME_TO_ID = {
 "sandstone" : 0,
 "chiseled"  : 1,
 "smooth"    : 2
@@ -193,7 +193,7 @@ sandstoneTypeNameToId = {
 
 
 # available 0 to 3
-bedTypeNameToId = {
+BED_TYPE_NAME_TO_ID = {
 "south" : 0,
 "west"  : 1,
 "north" : 2,
@@ -202,7 +202,7 @@ bedTypeNameToId = {
 
 # available 0 to 3
 # no effect seemingly
-grassTypeNameToId = {
+GRASS_TYPE_NAME_TO_ID = {
 "shub"        : 0,
 "grass"       : 1,
 "fern"        : 2,
@@ -210,19 +210,19 @@ grassTypeNameToId = {
 }
 
 # there appears to be no difference for each value
-yellowFlowerTypeNameToId = {
+YELLOW_FLOWER_TYPE_NAME_TO_ID = {
 "yellow" : 0
 }
 
 
 # there appears to be no difference for each value
-blueFlowerTypeNameToId = {
+BLUE_FLOWER_TYPE_NAME_TO_ID = {
 "blue" : 0
 }
 
 # direction of ascending 0 to 7 available
 # 0 to 3 for normal stairs, 4-7 for inverted stairs
-stairsTypeNameToId = {
+STAIRS_TYPE_NAME_TO_ID = {
 "east" : 0,
 "west" : 1,
 "south": 2,
@@ -233,7 +233,7 @@ stairsTypeNameToId = {
 "north-inverted": 7
 }
 
-doorTypeNameToId = {
+DOOR_TYPE_NAME_TO_ID = {
 "northwest": 0,
 "northeast": 1,
 "southeast": 2,
