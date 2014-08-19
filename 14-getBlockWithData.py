@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     if blockAndData.id == WOOL.id:
        print "is wool"
-       for colour, colId in colourNameToId.items():
+       for colour, colId in COLOUR_NAME_TO_ID.items():
            if colId == blockAndData.data:
                colourMsg = "Colour is " + colour
                print colourMsg
