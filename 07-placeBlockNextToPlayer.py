@@ -16,6 +16,6 @@ if __name__ == "__main__":
     blockYposn = playerPosition.y + 1
     blockZposn = playerPosition.z + 1
 
-    print("Creating block at", blockXposn, blockYposn, blockZposn)
+    print("Creating block at (%d, %d, %d)" % (blockXposn , blockYposn, blockZposn))
     # Create a block
     mc.setBlock(blockXposn, blockYposn, blockZposn, DIAMOND_BLOCK)

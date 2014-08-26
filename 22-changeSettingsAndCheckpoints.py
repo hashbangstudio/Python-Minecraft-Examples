@@ -65,7 +65,7 @@ if __name__ == "__main__":
     sleep(4)
     #Follow the player
     sendToChatAndConsole(mc, "Set Camera to follow the player")
-    mc.camera.setFollow(1)
+    mc.camera.setFollow()
     #wait for 4 seconds 
     sleep(4)
     sendToChatAndConsole(mc, "Making nametags visible")
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     #wait for 4 seconds 
     sleep(4)
     sendToChatAndConsole(mc, "Set Camera to normal player first person")
-    mc.camera.setNormal(1)
+    mc.camera.setNormal()
     #wait for 2 seconds 
     sleep(2)
     sendToChatAndConsole(mc, "Turning off AutoJump")

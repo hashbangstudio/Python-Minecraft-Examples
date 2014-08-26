@@ -43,6 +43,7 @@ if __name__ == "__main__":
 
             # go through the text file line by line
             for line in textFile:
+                print(line)
                 # send message to the minecraft chat
                 mc.postToChat(line)
         except IOError as e:

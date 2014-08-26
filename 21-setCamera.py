@@ -10,6 +10,14 @@ def printAvailableCameraModes():
     print("Available camera modes are:")
     print("normal, follow, fixed")
 
+def printUsage():
+    print("Usage : python script.py normal [entityId]")
+    print("Usage : python script.py follow [entityId]")
+    print("Usage : python script.py fixed Xcoord Ycoord Zcoord")
+
+    
+    
+
 # this means that the file can be imported without executing anything in this code block
 if __name__ == "__main__":
 
@@ -37,6 +45,8 @@ if __name__ == "__main__":
                 mc.camera.setFollow(sys.argv[2])
             else:
                print("Expected 1 or 2 parameters but got "+str(numOfParamsGiven))
+               printUsage()
+               exit()
         elif cameraMode == "normal" :
             if numOfParamsGiven == 1:
                 mc.camera.setNormal()
@@ -44,6 +54,8 @@ if __name__ == "__main__":
                 mc.camera.setNormal(sys.argv[2])
             else:
                print("Expected 1 or 2 parameters but got "+str(numOfParamsGiven))
+               printUsage()
+               exit()
         elif cameraMode == "fixed":
             if numOfParamsGiven == 4 :
             #should verify arguments are integer coordinates
@@ -53,10 +65,16 @@ if __name__ == "__main__":
                                  sys.argv[4])
             else:
                 print("insufficient parameters given")
-                print("Require 5 but got "+str(numOfParamsGiven))
+                print("Require 4 but got "+str(numOfParamsGiven))
+                printUsage()
+                exit()
         else:
             print("unknown camera mode parameter given "+ sys.argv[1])
             printAvailableCameraModes()
+            printUsage()
+            exit()
     else:
         print("insufficient parameters given")
         print("Require minimum of "+str(minNumOfParams)+", got "+str(numOfParamsGiven))
+        printUsage()
+        exit()

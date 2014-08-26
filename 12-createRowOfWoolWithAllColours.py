@@ -20,7 +20,7 @@ if __name__ == "__main__":
     for column in range(16):
         #increase the distance along and up that the block is placed at
         blockXposn = playerPosition.x + 1 + column
-        print("Creating block at", blockXposn, blockYposn, blockZposn)
+        print("Creating block with data %d at (%d, %d, %d)" % (column, blockXposn, blockYposn, blockZposn))
         # Create a block
         mc.setBlock(blockXposn, blockYposn, blockZposn, WOOL.withData(column))
     

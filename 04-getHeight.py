@@ -45,7 +45,7 @@ if __name__ == "__main__":
     height = mc.getHeight(x, z)
 
     # create the output message as a string
-    message = " height world is "+ str(height)+ " at "+ str((x,z))
+    message = "Height of world is "+ str(height)+ " at "+ str((x,z))
     
     # print to the python interpreter standard output (terminal or IDLE probably)
     print(message)

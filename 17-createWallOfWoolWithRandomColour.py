@@ -40,7 +40,7 @@ if __name__ == "__main__":
         for column in range(10):
             #increase the distance along the row that the block is placed at
             blockXposn += 1
-            print("Creating block at", blockXposn, blockYposn, blockZposn)
+            print("Creating block at (%d, %d, %d)" % ( blockXposn, blockYposn, blockZposn))
             # Create a block
             mc.setBlock(blockXposn, blockYposn, blockZposn, getWoolBlockWithRandomColour())
             sleep(0.5)

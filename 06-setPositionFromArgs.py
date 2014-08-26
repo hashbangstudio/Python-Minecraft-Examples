@@ -22,7 +22,7 @@ if __name__ == "__main__":
     playerPosition = mc.player.getTilePos()
 
     # create the output message as a string
-    message = " you are at (" +str(playerPosition.x)+","+str(playerPosition.y)+","+str(playerPosition.z)+")"
+    message = "You are at (" +str(playerPosition.x)+","+str(playerPosition.y)+","+str(playerPosition.z)+")"
 
     # print to the python interpreter standard output (terminal or IDLE probably)
     print(message)
@@ -34,8 +34,9 @@ if __name__ == "__main__":
     newZposn = 0
     numOfArgs = len(sys.argv)
     if numOfArgs == 3:
-        newXposn = int(sys.argv[1])
-        newZposn = int(sys.argv[2])
+        # Use float first in case argument is 3.3 string to avoid value error
+        newXposn = int(float(sys.argv[1]))
+        newZposn = int(float(sys.argv[2]))
     else:
         print("incorrect number of arguments")
         sys.exit()
@@ -47,7 +48,7 @@ if __name__ == "__main__":
     # Get the current tile/block that the player is located at in the world
     playerPosition = mc.player.getTilePos()
 
-    message = " you are now at (" +str(playerPosition.x)+","+str(playerPosition.y)+","+str(playerPosition.z)+")"
+    message = "You are now at (" +str(playerPosition.x)+","+str(playerPosition.y)+","+str(playerPosition.z)+")"
 
     print(message)
     mc.postToChat(message)

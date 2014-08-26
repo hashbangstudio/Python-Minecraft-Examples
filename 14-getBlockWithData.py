@@ -22,7 +22,11 @@ if __name__ == "__main__":
     playerPosition = mc.player.getTilePos()
     height = mc.getHeight(playerPosition.x, playerPosition.z)
     # create the output message as a string
-    message = " height is "+ str(height)
+    message = "Height is "+ str(height)
+    # print to the python interpreter standard output (terminal or IDLE probably)
+    print(message)
+    # post message to the chat
+    mc.postToChat(message)
 
     # Get the type of block for the highest point in world at horiz player posn
     blockAndData = mc.getBlockWithData(playerPosition.x, height , playerPosition.z)
@@ -33,7 +37,7 @@ if __name__ == "__main__":
         
     blockName = getBlockNameFromId(blockAndData.id)
     # Add to message, the type of block stood on
-    message += "  Block is of type " + str(blockAndData.id)+ " which is " + blockName
+    message = "Block is of type " + str(blockAndData.id)+ " which is " + blockName
     # print to the python interpreter standard output (terminal or IDLE probably)
     print(message)
     # post message to the chat

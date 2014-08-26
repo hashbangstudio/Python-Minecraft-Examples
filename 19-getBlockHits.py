@@ -4,6 +4,7 @@
 from mcpi.minecraft import *
 from mcpi.block import *
 from blockData import * 
+from time import sleep
 
 # this means that the file can be imported without executing anything in this code block
 if __name__ == "__main__":
@@ -22,4 +23,6 @@ if __name__ == "__main__":
         hits = mc.events.pollBlockHits()
         if len(hits) > 0:
             print hits
+            
+        sleep(1)
 

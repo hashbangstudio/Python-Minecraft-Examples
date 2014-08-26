@@ -18,25 +18,34 @@ if __name__ == "__main__":
     # Any communication with the world must use this object
     mc = Minecraft.create()
     
-    numOfArgs = len(sys.argv)
-    if numOfArgs == 4:
+    numOfArgs = len(sys.argv) - 1
+    if numOfArgs == 3:
         x = int(sys.argv[1])
         y = int(sys.argv[2])
-        z = int(sys.argv[3]) 
+        z = int(sys.argv[3])
+    elif numOfArgs == 2:
+       x = int(sys.argv[1])
+       z = int(sys.argv[2])
+       #Get the block that would be stood on at this Horiz posn
+       y = mc.getHeight(x,z) - 1
     else:
         print("Number of arguments incorrect")
+        print("Expected 2 or 3 arguments but got %d" % (numOfArgs))
+        print("Usage with 3 args: python script.py xcoord ycoord zcoord")
+        print("Usage with 2 args: python script.py xcoord zcoord")
         sys.exit()
     
-    # Get the type of block for the highest point in world at horiz player posn
     blockAndData = mc.getBlockWithData(x, y ,z)
-        
-    if blockAndData.id == AIR.id:
-        # Need to do height minus one for this
-        blockAndData = mc.getBlockWithData(x, y -1 , z)
     blockName = getBlockNameFromId(blockAndData.id)
         
-    # Add to message, the type of block stood on
-    message = "  Block is of type " + str(blockAndData.id)+ " which is " + blockName
+    # create message for the type of block
+    message = "Block is of type " + str(blockAndData.id)+ " which is " + blockName
+    # print to the python interpreter standard output (terminal or IDLE probably)
+    print(message)
+    # post message to the chat
+    mc.postToChat(message) 
+
+    message = "Block data " + str(blockAndData.data)
     # print to the python interpreter standard output (terminal or IDLE probably)
     print(message)
     # post message to the chat

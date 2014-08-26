@@ -22,7 +22,7 @@ if __name__ == "__main__":
     playerPosition = mc.player.getTilePos()
 
     # create the output message as a string
-    message = " you are at (" +str(playerPosition.x)+","+str(playerPosition.y)+","+str(playerPosition.z)+")"
+    message = "You are at (" +str(playerPosition.x)+", "+str(playerPosition.y)+", "+str(playerPosition.z)+")"
 
     # print to the python interpreter standard output (terminal or IDLE probably)
     print(message)
@@ -40,8 +40,10 @@ if __name__ == "__main__":
     newYposn = mc.getHeight(newXposn, newZposn)
     # Set the position of the player
     mc.player.setTilePos(newXposn, newYposn, newZposn)
-
-    message = " you have been moved to (" +str(newXposn)+","+str(newYposn)+","+str(newZposn)+")"
+    # Get the current tile/block that the player is located at in the world
+    playerPosition = mc.player.getTilePos()
+    
+    message = "You have been moved to (" +str(playerPosition.x)+", "+str(playerPosition.y)+", "+str(playerPosition.z)+")"
 
     print(message)
     mc.postToChat(message)

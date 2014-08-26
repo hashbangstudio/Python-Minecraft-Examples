@@ -23,8 +23,14 @@ if __name__ == "__main__":
 
     height = mc.getHeight(playerPosition.x, playerPosition.z)
     # create the output message as a string
-    message = " height is "+ str(height)
+    message = "Height is "+ str(height)
+    
+     # print to the python interpreter standard output (terminal or IDLE probably)
+    print(message)
 
+    # send message to the minecraft chat
+    mc.postToChat(message)
+    
     # Get the type of block for the highest point in world
     # This is done at the horizonal player posn
     blockIdNum = mc.getBlock(playerPosition.x, height , playerPosition.z)
@@ -36,7 +42,7 @@ if __name__ == "__main__":
     
     blockName = getBlockNameFromId(blockIdNum)
     # Add to message, the type of block stood on
-    message += "  Block is of type " + str(blockIdNum)+ " which is " + blockName
+    message = "Block is of type " + str(blockIdNum)+ " which is " + blockName
 
     # print to the python interpreter standard output (terminal or IDLE probably)
     print(message)
