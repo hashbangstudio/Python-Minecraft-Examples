@@ -77,7 +77,7 @@ NETHER_REACTOR_CORE.id:"NETHER_REACTOR_CORE"
 }
 
 def getBlockNameFromId(num):
-    return blockIdToName[num]
+    return BLOCK_ID_TO_NAME[num]
 
 #avaiable 0-1, affects whether striking blk sets off fuse
 TNT_TYPE_NAME_TO_ID = {
