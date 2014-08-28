@@ -25,7 +25,7 @@ To run in IDLE some examples need slight modification first to replace the usage
 1. Open LXTerminal by double clicking on the icon on the desktop or click on :
   Start Menu > Accessories > LXTerminal
 
-2. Navigate to the folder where these examples are, assuming you have uncompressed the zip folder cloned the repository in your home folder :
+2. Navigate to the folder where these examples are, assuming you have uncompressed the zip folder or cloned the repository in your home folder :
  `cd Python-Minecraft-Examples`
 3. Type: `python filename.py` and press enter (where filename is the examples to try)
 4. Where the script expects arguments you supply those after the filename. or example:
