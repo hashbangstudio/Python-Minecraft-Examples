@@ -5,6 +5,24 @@ A set of examples of how to use the Minecraft Python API and Minecraft Pi editio
 
 To use these examples first you need to have Minecraft installed:
 
+If you have a recently updated version of Raspbian you can install Minecraft-Pi from the repositories.
+
+1. Open LXTerminal by double clicking on the icon on the desktop or click on :
+  Start Menu > Accessories > LXTerminal
+2. Type the following commands and press enter after each one:
+  * `sudo apt-get update`
+  * `sudo apt-get install minecraft-pi`
+3. You should now see a minecraft shortcut icon on the desktop. Double click on this to start minecraft pi
+
+Alternatively you can start minecraft from the terminal:
+
+1. Open LXTerminal by double clicking on the icon on the desktop or click on :
+  Start Menu > Accessories > LXTerminal
+2. type `minecraft-pi` and press enter. Note if you wish to start minecraft in the background you need to type `minecraft-pi &`
+
+
+If you have an older version of Raspbian you need to do the following:
+
 1. Go to http://pi.minecraft.net
 2. Click on *Downloads* in the menu bar
 3. Click on the download link
