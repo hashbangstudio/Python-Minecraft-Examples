@@ -110,7 +110,7 @@ COLOUR_NAME_TO_ID = {
 
 # only 0-2 seem to do anything for texture
 # 0 to 3 is type, beyond that is decay counter
-# avilablerange 0-15 
+# avilablerange 0-15
 LEAVES_TYPE_NAME_TO_ID = {
 "oak"   : 0,
 "pine"  : 1,
@@ -169,7 +169,7 @@ SLAB_TYPE_NAME_TO_ID = {
 #available 0-15
 # only 1 to 5 does anything
 # 6 and 7 wil use default stone
-# above that just cycles back round 
+# above that just cycles back round
 DOUBLE_SLAB_TYPE_NAME_TO_ID = {
 "stone"            : 0,
 "sandstone"        : 1,
@@ -203,7 +203,7 @@ BED_TYPE_NAME_TO_ID = {
 # available 0 to 3
 # no effect seemingly
 GRASS_TYPE_NAME_TO_ID = {
-"shub"        : 0,
+"shrub"        : 0,
 "grass"       : 1,
 "fern"        : 2,
 "biome-shrub" : 3,
